@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="practica-lambdas" />
-        <module name="lambda_listar" />
+        <module name="practica-aws" />
       </profile>
     </annotationProcessing>
   </component>
