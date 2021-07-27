@@ -17,8 +17,8 @@ public class HandlerListar implements RequestHandler<Cliente,Object> {
         AmazonDynamoDB db = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(db);
         if(cliente.getIdentificacion() != null){
-            Cliente c = mapper.load(Cliente.class, cliente.getIdentificacion());
-            return c;
+            Cliente clienteBuscado = mapper.load(Cliente.class, cliente.getIdentificacion());
+            return clienteBuscado;
         }
         List<Cliente> clientes = new ArrayList<>();
         clientes = mapper.scan(Cliente.class, new DynamoDBScanExpression());
